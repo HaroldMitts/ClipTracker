@@ -25,7 +25,7 @@ if not os.path.exists(text_file_path):
 
 strings_to_delete = {
     ":": True,
-    "Raj G": True,
+    "Raja Gonna Getcha": True,
     "HM": True,
     "LB": True,
     "SA": True,
