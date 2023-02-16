@@ -15,3 +15,5 @@ The script logs deleted content to a file called log.txt and saves the remaining
 To use the script, simply run it in the background and copy any text to the clipboard as you normally would. The script will automatically filter out unwanted content and save the remaining content to the text.txt file.
 
 Note that the script requires the pyperclip library to be installed, which can be installed using pip.
+
+Run the script from the console then start copying text at-will. The script will continue to append the text.txt file with all your text copied. To exit, press Control-C in the console. Additional content can be written to the same text.txt file on subsequent runs, or you can backup/delete the text.txt file to start new.
