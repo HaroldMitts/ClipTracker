@@ -7,16 +7,27 @@ from datetime import date
 today = date.today()
 date_string = today.strftime("%b-%d-%Y")
 
-text_file_path = "c:\\tmp\\text.txt"
-log_file_path = "c:\\tmp\\log.txt"
+directory_path = "c:\\tmp"
+if not os.path.exists(directory_path):
+    os.mkdir(directory_path)
+    print(f"Directory '{directory_path}' did not exist and has been created.")
+
+text_file_path = f"{directory_path}\\text.txt"
+log_file_path = f"{directory_path}\\log.txt"
 
 new_text_filename = input("Enter new text filename (without extension): ")
 new_log_filename = input("Enter new log filename (without extension): ")
 
+print("Script started.")
+print("Text file path:", text_file_path)
+print("Log file path:", log_file_path)
+print("Waiting for new clipboard contents... begin copying text to clipboard.")
+print("Press Ctrl+C to stop the script.")
+
 if new_text_filename:
-    text_file_path = f"c:\\tmp\\{new_text_filename}-{date_string}.txt"
+    text_file_path = f"{directory_path}\\{new_text_filename}-{date_string}.txt"
 if new_log_filename:
-    log_file_path = f"c:\\tmp\\{new_log_filename}-log-{date_string}.txt"
+    log_file_path = f"{directory_path}\\{new_log_filename}-log-{date_string}.txt"
 
 if not os.path.exists(log_file_path):
     open(log_file_path, 'w', encoding='utf-8').close()
