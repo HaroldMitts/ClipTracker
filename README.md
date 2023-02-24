@@ -1,4 +1,4 @@
-# ClipTracker
+# ClipTracks
 
 This Python script monitors the clipboard for changes and logs deleted content to a file, while saving the remaining content to a text file. It is designed to help you keep track of your clipboard history and prevent unwanted content from being saved.
 
